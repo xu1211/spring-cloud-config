@@ -4,11 +4,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 server:
-  port: 8082
+  port: 8084
 
 spring:
   application:
-    name: product-view-service-feign-hystrix
+    name: product-view-service-feign-config-client
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
@@ -21,13 +21,3 @@ spring:
 feign:
   hystrix:
     enabled: true
-
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-      cors:
-        allowed-origins: "*"
-        allowed-methods: "*"
